@@ -177,3 +177,14 @@ a.bg-dark:hover, button.bg-dark:hover  {
 }
 
 /****/
+
+
+.profile-img {
+    margin: 10px;
+    width: 220px;
+    height: 220px;
+    /*border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;*/
+    border-radius: 50%;
+    /*border-radius: 40px;*/
+}
