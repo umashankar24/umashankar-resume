@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="images/svg/engineer.svg"/>
+
+    <!-- BSv5 Beta 2 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.v5-beta2.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Fonts: Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    
+    <!-- BSv5 Beta 2 JS -->
+    <script src="js/bootstrap.v5-beta2.bundle.min.js"></script>
+
+    <title>UmaShankar: Web Resume</title>
+
+    <style>
+        hr {
+            margin: 0!important;
+        }
+
+        table tr > td:first-child {
+            width: 32%;
+            font-weight: 600;
+        }
+
+        .table {
+            margin-top: 10px;
+        }
+
+        table td {
+            padding: 0.2rem!important;
+        }
+
+        .table>:not(caption)>*>* {
+            border-bottom-width: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <header class="navbar-component">
+
+    </header>
+
+    <main>
+
+        <!-- Intro Content -->
+        <div class="intro-content" style="background-color: var(--bs-gray-dark); height: 300px;">
+            <div class="container" style="max-width: 1200px!important; padding: 0.4rem;">
+                
+                <div class="intro-content-inner" style="padding: 40px 0px;">
+
+                    <div class="card">
+                        <div class="" style="position: absolute; top: 0px; right: 0px;">
+
+                            <a href="./content/resume/UmaShankar-Resume.pdf" target="_blank" class="btn btn-dark bg-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down-fill" viewBox="0 0 16 16">
+                                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0z"/>
+                                </svg>
+                                Resume
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Intro Content Ends -->
+
+        <div class="resume-holder">
+            <div class="container-fluid" style="max-width: 1200px!important; padding: 0.4rem;">
+
+                <div class="resume-holder-inner" style="margin-top: -180px; background: #fff;">
+
+                    <div class="resume-card">
+
+                       
+
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer-component">
+        
+    </footer>
+
+
+    <script defer>
+
+        /*** Comments:  */
+        function thisFilePath() {
+            let currhref = window.location.href;
+            let filePath = currhref.substring(0, currhref.lastIndexOf("/"));
+            return filePath;
+        }
+        
+        // Get Resume Card
+        async function loadResumeCard() {
+            let _thisLoc = thisFilePath();
+            document.querySelector(".resume-card").innerHTML = await (await fetch(_thisLoc + '/ResumeCard.html')).text();
+        }
+        
+        function main() {
+            loadResumeCard();
+        }
+
+        main();
+
+    </script>
+
+</body>
+</html>
