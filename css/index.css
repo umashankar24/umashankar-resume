@@ -188,3 +188,7 @@ a.bg-dark:hover, button.bg-dark:hover  {
     border-radius: 50%;
     /*border-radius: 40px;*/
 }
+
+.no-shadow {
+    box-shadow: none!important;
+}
